@@ -1,1 +1,32 @@
+.article-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 40px;
+  background-color: #1a2a3a;
+  color: #ecf0f1;
+}
+
+.article-img {
+  flex: 1 1 400px;
+  max-width: 400px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.article-text {
+  flex: 2 1 300px;
+  min-width: 300px;
+}
+
+.article-text h1 {
+  color: #00bfff;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.article-text p {
+  font-size: 1.1em;
+  line-height: 1.6em;
+}
 
