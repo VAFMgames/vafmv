@@ -67,9 +67,49 @@ p {
   width: 100%;
 }
 
-.vignette.principale {
-  flex: 2;
-  min-width: 300px;
+.vignette-principale {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+
+.vignette-principale img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.overlay-fondu {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  color: #ecf0f1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.vignette-principale:hover .overlay-fondu {
+  opacity: 1;
+}
+
+.overlay-fondu h3 {
+  margin: 0;
+  font-size: 1.6em;
+  color: #00bfff;
+}
+
+.overlay-fondu p {
+  margin-top: 10px;
+  font-size: 1em;
 }
 
 .vignettes-droite {
