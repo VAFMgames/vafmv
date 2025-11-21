@@ -68,6 +68,7 @@ p {
 }
 
 .vignette-une {
+  margin: 40px auto; /* 🔽 centre horizontalement */
   position: relative;
   display: block;
   width: 100%;
