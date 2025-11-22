@@ -208,7 +208,7 @@ p {
   background-color: #0099cc;
 }
 
-.logo {
+.nav-right {
   height: 60px; /* 🔽 Avant : peut-être 120px ou plus */
   width: auto;
 }
