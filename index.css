@@ -212,3 +212,9 @@ p {
   height: 60px; /* 🔽 Avant : peut-être 120px ou plus */
   width: auto;
 }
+
+@media (max-width: 600px) {
+  .nav-right {
+    height: 40px;
+  }
+}
