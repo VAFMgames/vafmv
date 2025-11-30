@@ -1,26 +1,31 @@
-  fetch("index.html")
-    .then(res => res.text())
-    .then(html => {
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(html, "text/html");
-      const articleNodes = doc.querySelectorAll(".article");
+    // Charger index.html et extraire les blocs
+    fetch("index.html")
+      .then(res => res.text())
+      .then(html => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, "text/html");
 
-      const articles = Array.from(articleNodes).map(node => ({
-        title: node.dataset.title,
-        content: node.dataset.content,
-        html: node.innerHTML
-      }));
+        // Sélectionner les titres existants
+        const articles = [];
+        doc.querySelectorAll(".titre-fixe, .titre-overlay h4").forEach(el => {
+          const bloc = el.closest(".vignette, .vignette-actu, a"); // récupère le bloc parent
+          if (bloc) {
+            articles.push({
+              title: el.textContent.trim(),
+              html: bloc.outerHTML
+            });
+          }
+        });
 
-      const searchInput = document.getElementById("search");
-      const resultsDiv = document.getElementById("results");
+        const searchInput = document.getElementById("search");
+        const resultsDiv = document.getElementById("results");
 
-      searchInput.addEventListener("keyup", () => {
-        const query = searchInput.value.toLowerCase();
-        const filtered = articles.filter(a =>
-          a.title.toLowerCase().includes(query) ||
-          a.content.toLowerCase().includes(query)
-        );
+        searchInput.addEventListener("keyup", () => {
+          const query = searchInput.value.toLowerCase();
+          const filtered = articles.filter(a =>
+            a.title.toLowerCase().includes(query)
+          );
 
-        resultsDiv.innerHTML = filtered.map(a => `<div class="article">${a.html}</div>`).join("");
+          resultsDiv.innerHTML = filtered.map(a => `<div class="result">${a.html}</div>`).join("");
+        });
       });
-    });
