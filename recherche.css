@@ -36,13 +36,21 @@ main {
 }
 
 .btn-search {
-  display: inline-block;
-  padding: 5px;
+  background-color: #00bfff;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
-.search-icon {
-  width: 32px;
-  height: 32px;
-  vertical-align: middle;
+.btn-search:hover {
+  background-color: #0099cc;
+}
+
+.icon-search {
+  height: 60px; /* 🔽 Avant : peut-être 120px ou plus */
+  width: auto;
 }
 
