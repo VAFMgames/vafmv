@@ -11,28 +11,31 @@
   <script type="module" defer src="recherche.js"></script>
 </head>
 <body>
-    <header class="top-bar">
-      <div class="logo-zone">
-        <img src="assets/VAFM_GAME__2.png" alt="VAFM" class="logo">
-      </div>
-      
-    <input type="text" id="search" placeholder="Rechercher...">
-      
-      <div class="nav-right">
-        <a href="login.html" class="btn-icon" title="Connexion / Inscription">
-          <img src="assets/logo_connexion.png" alt="Connexion" class="icon-user">
-        </a>
-      </div>
-      
-      <div class="home-icon">
-        <a href="index.html" title="Accueil">
-          <img src="assets/home.png" alt="Accueil" class="icon-home">
-        </a>
-      </div>
-    </header>
+  <header class="top-bar">
+    <div class="logo-zone">
+      <img src="assets/VAFM_GAME__2.png" alt="VAFM" class="logo">
+    </div>
+
+    <!-- Champ de recherche -->
+    <form class="search-form" role="search">
+      <input type="text" id="search" placeholder="Rechercher..." aria-label="Rechercher un article">
+    </form>
+
+    <div class="nav-right">
+      <a href="login.html" class="btn-icon" title="Connexion / Inscription">
+        <img src="assets/logo_connexion.png" alt="Connexion" class="icon-user">
+      </a>
+    </div>
+
+    <div class="home-icon">
+      <a href="index.html" title="Accueil">
+        <img src="assets/home.png" alt="Accueil" class="icon-home">
+      </a>
+    </div>
+  </header>
+
   <main id="results">
     <!-- Les articles filtrés s'affichent ici -->
   </main>
 </body>
 </html>
-
