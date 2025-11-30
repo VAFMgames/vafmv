@@ -40,7 +40,7 @@ p {
 }
 
 .vignette.principale {
-  max-width: 900px; /* ou la largeur que tu veux */
+  max-width: 1000px; /* ou la largeur que tu veux */
   width: 100%;
   margin: 0 auto;
 }
