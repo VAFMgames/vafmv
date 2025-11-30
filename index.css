@@ -32,13 +32,17 @@ p {
   line-height: 1.6em;
 }
 
-/* La Une */
 .la-une-grid {
   display: flex;
-  gap: 20px;
-  padding: 40px;
-  background-color: #1a2a3a;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
+}
+
+.vignette.principale {
+  max-width: 600px; /* ou la largeur que tu veux */
+  width: 100%;
+  margin: 0 auto;
 }
 
 .overlay,
