@@ -76,7 +76,7 @@
   color: #00bfff;
 }
 
-.btn-login {
+.home-icon {
   background-color: #00bfff;
   color: #fff;
   padding: 10px 16px;
@@ -86,11 +86,11 @@
   transition: background-color 0.3s ease;
 }
 
-.btn-login:hover {
+.home-icon:hover {
   background-color: #0099cc;
 }
 
-.icon-user {
+.icon-home {
   height: 60px; /* 🔽 Avant : peut-être 120px ou plus */
   width: auto;
 }
