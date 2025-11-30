@@ -1,23 +1,26 @@
-const articles = [
-  { title: "Fortnite Chapitre 5", content: "Toutes les nouveautés du chapitre", url: "articles/fortnite.html" },
-  { title: "Elden Ring DLC", content: "Extension Shadow of the Erdtree", url: "articles/eldenring.html" },
-  { title: "Apex Legends", content: "Battle royale dynamique", url: "articles/apex.html" }
-];
+  fetch("index.html")
+    .then(res => res.text())
+    .then(html => {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, "text/html");
+      const articleNodes = doc.querySelectorAll(".article");
 
-const searchInput = document.getElementById("search");
-const resultsDiv = document.getElementById("results");
+      const articles = Array.from(articleNodes).map(node => ({
+        title: node.dataset.title,
+        content: node.dataset.content,
+        html: node.innerHTML
+      }));
 
-searchInput.addEventListener("keyup", () => {
-  const query = searchInput.value.toLowerCase();
-  const filtered = articles.filter(a =>
-    a.title.toLowerCase().includes(query) || a.content.toLowerCase().includes(query)
-  );
+      const searchInput = document.getElementById("search");
+      const resultsDiv = document.getElementById("results");
 
-  resultsDiv.innerHTML = filtered.map(a => `
-    <div class="card">
-      <h3><a href="${a.url}">${a.title}</a></h3>
-      <p>${a.content}</p>
-    </div>
-  `).join("");
-});
+      searchInput.addEventListener("keyup", () => {
+        const query = searchInput.value.toLowerCase();
+        const filtered = articles.filter(a =>
+          a.title.toLowerCase().includes(query) ||
+          a.content.toLowerCase().includes(query)
+        );
 
+        resultsDiv.innerHTML = filtered.map(a => `<div class="article">${a.html}</div>`).join("");
+      });
+    });
