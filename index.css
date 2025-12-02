@@ -143,23 +143,23 @@ p {
 .vignette-actu {
   display: flex;
   align-items: center;
-  background-color: #1a1a1a;
+  background-color: transparent; /* ✅ pas de couleur de fond */
   color: white;
   text-decoration: none;
-  border-radius: 10px;
-  padding: 15px;
+  border-radius: 0; /* ✅ coins non arrondis si tu veux un style brut */
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* ✅ ligne fine pour séparer */
   transition: transform 0.3s ease;
 }
 
 .vignette-actu:hover {
-  transform: scale(1.02);
+  transform: scale(1.01);
 }
 
 .vignette-actu img {
   width: 120px;
   height: 120px;
   object-fit: cover;
-  border-radius: 8px;
   margin-right: 20px;
 }
 
@@ -170,13 +170,13 @@ p {
 .contenu-actu h4 {
   margin: 0;
   font-size: 20px;
-  color: #00bfff;
+  color: #ecf0f1;
 }
 
 .contenu-actu p {
   margin: 8px 0 0;
   font-size: 15px;
-  color: #ccc;
+  color: #bbb;
 }
 
 .titre-overlay {
