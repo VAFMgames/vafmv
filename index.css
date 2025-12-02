@@ -180,6 +180,19 @@ p {
   color: #bbb;
 }
 
+.bloc.actus {
+  background-color: #34495e; /* ta couleur actuelle */
+  padding: 60px 20px;        /* espace autour */
+}
+
+.actus-ligne {
+  max-width: 1200px;   /* ✅ largeur limitée */
+  margin: 0 auto;      /* ✅ centre le bloc */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
 .titre-overlay {
   padding: 10px;
 }
