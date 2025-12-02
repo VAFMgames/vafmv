@@ -156,8 +156,8 @@ p {
 }
 
 .vignette-actu img {
-  width: 120px;   /* image plus grande */
-  height: 120px;  /* carrée */
+  width: 120px;
+  height: 120px;
   object-fit: cover;
   border-radius: 8px;
   margin-right: 20px;
