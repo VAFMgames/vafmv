@@ -1,91 +1,102 @@
-/* Police globale */
-body {
-  font-family: 'Open Sans', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f9f9f9;
-  color: #333;
-}
-
-/* Header */
-.top-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #111;
-  padding: 10px 20px;
-}
-
-.logo {
-  height: 60px;
-}
-
-.icon-home {
-  height: 30px;
-}
-
-/* Article */
 .article-layout {
   display: flex;
-  gap: 20px;
-  padding: 20px;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 40px;
+  background-color: #1a2a3a;
+  color: #ecf0f1;
+}
+
+.article-img {
+  flex: 1 1 400px;
+  max-width: 450px;
+  border-radius: 12px;
+  object-fit: cover;
 }
 
 .article-text {
-  max-width: 600px;
+  flex: 2 1 300px;
+  min-width: 300px;
 }
 
 .article-text h1 {
+  color: #00bfff;
   font-size: 2em;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .article-text p {
-  line-height: 1.6;
-  margin-bottom: 10px;
+  font-size: 1.1em;
+  line-height: 1.6em;
 }
 
-/* Suggestions */
 .suggestions {
-  background-color: #eee;
-  padding: 20px;
+  padding: 40px;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+}
+
+.suggestions h2 {
+  color: #00bfff;
+  margin-bottom: 30px;
+  font-size: 1.8em;
 }
 
 .suggestions-grid {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .suggestion-card {
+  width: 220px;
+  background-color: #34495e;
+  border-radius: 12px;
+  overflow: hidden;
   text-decoration: none;
-  color: #111;
-  width: 200px;
+  color: #ecf0f1;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.suggestion-card:hover {
+  transform: scale(1.03);
 }
 
 .suggestion-card img {
   width: 100%;
-  border-radius: 5px;
+  height: 140px;
+  object-fit: cover;
 }
 
 .suggestion-card h4 {
-  margin-top: 10px;
+  padding: 10px;
   font-size: 1em;
+  color: #00bfff;
 }
 
-/* Footer */
-.site-footer {
-  background-color: #111;
+.home-icon {
   color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-.footer-links a {
-  color: #fff;
-  margin: 0 10px;
+  padding: 10px 16px;
+  border-radius: 8px;
   text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
-.footer-links a:hover {
-  text-decoration: underline;
+.home-icon:hover {
+  background-color: #0099cc;
+}
+
+.icon-home {
+  height: 60px; /* 🔽 Avant : peut-être 120px ou plus */
+  width: auto;
+}
+
+.article-page {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 1.1em;
+  line-height: 1.6em;
+  color: #ecf0f1;
 }
