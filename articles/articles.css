@@ -114,10 +114,6 @@ body {
   font-family: 'Open Sans', Arial, sans-serif;
 }
 
-.home-icon:hover {
-  background-color: #0099cc;
-}
-
 .icon-home {
   height: 60px;
   width: auto;
