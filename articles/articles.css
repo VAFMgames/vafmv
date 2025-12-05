@@ -211,6 +211,19 @@ body {
   height: 32px;
 }
 
+.article-author {
+  margin-top: 40px;
+  text-align: left;
+  font-size: 0.95em;
+  color: #bbb;
+  width: 100%;
+}
+
+.article-author strong {
+  color: #00bfff;
+  font-weight: 600;
+}
+
 /* Responsive */
 @media (max-width: 960px) {
   .article-img img {
