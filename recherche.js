@@ -39,14 +39,16 @@ fetch("index.html")
         a.title.toLowerCase().includes(query) || a.text.toLowerCase().includes(query)
       );
 
-      resultsDiv.innerHTML = filtered
-        .map(a => `
-          <a href="${a.link}" class="vignette-result">
-            <img src="${a.image}" alt="${a.title}">
-            <h4>${a.title}</h4>
-            <p>${a.text}</p>
-          </a>
-        `)
-        .join("");
+      resultsDiv.innerHTML = filtered.length > 0
+        ? filtered.map(a => `
+            <a href="${a.link}" class="vignette-horizontal">
+              <img src="${a.image}" alt="${a.title}">
+              <div class="vignette-texte">
+                <h4>${a.title}</h4>
+                <p>${a.text}</p>
+              </div>
+            </a>
+          `).join("")
+        : `<p class="no-result">Aucun résultat trouvé.</p>`;
     });
   });
