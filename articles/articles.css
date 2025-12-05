@@ -189,6 +189,14 @@ body {
   color: #bbb;
 }
 
+.article-date {
+  font-size: 0.95em;
+  color: #bbb;
+  margin-bottom: 20px;
+  text-align: left;
+  width: 100%;
+}
+
 /* Responsive */
 @media (max-width: 960px) {
   .article-img img {
