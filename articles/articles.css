@@ -18,42 +18,49 @@ body {
 .article-wrapper {
   max-width: 900px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 50px 20px; /* plus d’air autour */
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex: 1 0 auto; /* pousse le footer si peu de contenu */
+  flex: 1 0 auto;
+}
+
+/* Titres */
+.article-wrapper h1 {
+  margin: 50px 0 25px; /* espace avant et après */
+  font-size: 2em;
+  color: #00bfff;
+  font-weight: 700;
+  text-align: left;
+  width: 100%;
+}
+
+/* Texte au-dessus et en dessous des images */
+.article-text-top,
+.article-text-bottom {
+  text-align: left;
+  width: 100%;
 }
 
 .article-text-top {
-  text-align: left;
   margin-bottom: 30px;
-  width: 100%;
 }
 
 .article-text-bottom {
-  text-align: left;
-  margin-top: 20px;
-  width: 100%;
+  margin: 25px 0 45px; /* plus d’espace */
 }
 
-.article-text-top h1 {
-  font-size: 2.2em;
-  color: #00bfff;
-  margin-bottom: 20px;
-  font-weight: 700;
-}
-
-.article-text-top p {
+.article-text-top p,
+.article-text-bottom p {
   font-size: 1.1em;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 /* Image centrée */
 .article-img {
   display: flex;
   justify-content: center;
-  margin: 30px 0;
+  margin: 35px 0; /* espace autour des images */
 }
 
 .article-img img {
@@ -63,16 +70,12 @@ body {
   object-fit: cover;
 }
 
-/* Texte brut collé sans <p> (retours à la ligne respectés) */
+/* Texte brut */
 .article-content {
   white-space: pre-line;
   font-size: 1.1em;
-  margin-bottom: 15px;
-}
-
-.article-text-bottom p {
-  font-size: 1.1em;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
+  line-height: 1.7em;
 }
 
 /* Suggestions */
@@ -189,6 +192,7 @@ body {
   color: #bbb;
 }
 
+/* Date */
 .article-date {
   font-size: 0.95em;
   color: #bbb;
@@ -197,6 +201,7 @@ body {
   width: 100%;
 }
 
+/* Bouton copier */
 .copy-button {
   background: none;
   border: none;
@@ -211,8 +216,9 @@ body {
   height: 32px;
 }
 
+/* Auteur */
 .article-author {
-  margin-top: 40px;
+  margin-top: 50px;
   text-align: left;
   font-size: 0.95em;
   color: #bbb;
@@ -237,8 +243,9 @@ body {
     padding: 28px 16px;
   }
 
-  .article-text-top h1 {
-    font-size: 1.8em;
+  .article-wrapper h1 {
+    font-size: 1.6em;
+    margin: 35px 0 20px;
   }
 
   .article-img {
@@ -249,3 +256,4 @@ body {
     height: 160px;
   }
 }
+
